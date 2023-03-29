@@ -8,42 +8,43 @@
   
   <title>Frontend Mentor | Interactive rating component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+  <!-- Stylesite -->
+
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <main>
+  <seciton class="rating">
+    <img src="images/icon-star.svg" class="icon-star">
+    
+    <h2>How did we do?</h2>
+    <p>Please let us know how we did with your support request. All feedback is appreciated to help us improve our offering!</p>
 
-  <!-- Rating state start -->
+    <div class="rating_choice">
+      <button class="rate">1</button>
+      <button class="rate">2</button>
+      <button class="rate">3</button>
+      <button class="rate">4</button>
+      <button class="rate">5</button>
+    </div>
 
-  How did we do?
+    <button class="rating_submit">Submit</button>
 
-  Please let us know how we did with your support request. All feedback is appreciated 
-  to help us improve our offering!
+    </seciton>
 
-  1 2 3 4 5
+    <section class="thankYou">
 
-  Submit
+      <img src="images/icon-star.svg" class="icon-star">
+      <h3>You selected <span><!-- Add rating here --></span> out of 5</h3>
+      <h2>Thank you!</h2>
+      <p>We appreciate you taking the time to give a rating. If you ever need more support, don't hesitate to get in touch!</p>
 
-  <!-- Rating state end -->
-
-  <!-- Thank you state start -->
-
-  You selected <!-- Add rating here --> out of 5
-
-  Thank you!
-
-  We appreciate you taking the time to give a rating. If you ever need more support, 
-  don’t hesitate to get in touch!
-
-  <!-- Thank you state end -->
-
-  
-  <div class="attribution">
+    </section>
+  </main>
+  <section class="attribution">
     Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
     Coded by <a href="#">Your Name Here</a>.
-  </div>
+  </section>
+  <script src="script.js"></script>
 </body>
 </html>
