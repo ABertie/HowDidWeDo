@@ -1,3 +1,21 @@
+:root {
+    --Mobile: 375px;
+    --Desktop: 1440px;
+
+    --color-primary: hsl(25, 97%, 53%);
+    --color-DarkPrimary: hsl(25, 64%, 44%);
+
+    --color-White: hsl(0, 0%, 100%);
+    --color-LightGrey: hsl(217, 12%, 63%);
+    --color-MediumGrey: hsl(216, 12%, 54%);
+    --color-Blue: hsl(213, 30%, 12%);
+    --color-DarkBlue: hsl(213, 19%, 18%);
+    --color-VeryDarkBlue: hsl(216, 12%, 8%);
+
+    --Fontsize: 15px;
+    --fontFamily: 'Overpass', sans-serif;
+}
+
 /* overall */
 * {
     margin: 0;
@@ -5,9 +23,29 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
-    background-color: rgb(28, 28, 28);
+    background-color: var(--color-VeryDarkBlue);
+
+    color: var(--color-White);
+    font-family: var(--fontFamily);
+}
+
+p {
+    color: var(--color-LightGrey);
+    font-size: var(--Fontsize);
+}
+
+a {
+    color: var(--color-LightGrey);
+}
+
+h4 {
+    background: var(--color-DarkBlue);
+    border-radius: 2rem;
+    padding: .5rem;
+    margin: auto;
+    color: var(--color-DarkPrimary);
 }
 
 main {
@@ -15,18 +53,42 @@ main {
     justify-content: center;
     align-items: center;
 
-    height: 95%;
+    height: 100%;
 }
 
-.icon-star{
-    height: 1rem;
-    width: 1rem;
+img {
+    background-size: contain;
+    margin: auto;
 }
 
-button{
+.icon-star {
+    background-color: var(--color-DarkBlue);
+
+    padding: 1rem;
+    border-radius: 50%;
+    margin-left: 0;
+}
+
+button {
+    --color-bg: var(--color-DarkBlue);
+    --color-t: var(--color-LightGrey);
+    --color-hover-t: var(--color-White);
+
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
+    border: none;
+
+    background: var(--color-bg);
+    color: var(--color-t);
+
+    font-weight: bold;
+}
+
+button:hover, button:focus {
+    --color-bg: var(--color-primary);
+
+    color: var(--color-hover-t);    
 }
 
 /* rating */
@@ -35,44 +97,49 @@ button{
     flex-direction: column;
     gap: 2rem;
 
-    background-color: rgb(48, 44, 82);
+    background: radial-gradient(circle at center 1%, var(--color-DarkBlue), var(--color-Blue) 60%);
 
-    width: 25rem;
+    width: clamp(21rem, 100%, 25rem);
     padding: 2rem;
     border-radius: 2rem;
     margin: 1rem;
 }
 
-.rating_choice{
+.rating_choice {
     display: flex;
     flex-direction: row;
-    gap: 1rem;
+    gap: .5rem;
+
+    width: 100%;
 }
 
-.rating_choice *{
+.rating_choice * {
     margin: 0 auto;
 }
 
 .rating_submit {
-    height: auto;
-    width: auto;
-    padding: 1rem;
+    --color-bg: var(--color-primary);
+    --color-t: var(--color-White);
+
+    width: 100%;
     border-radius: 2rem;
+
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
 }
 
+.rating_submit:hover, .rating_submit:focus {
+    --color-hover-t: var(--color-primary);
+    --color-bg: var(--color-t);
+}
+
+#active{
+    --color-bg: var(--color-LightGrey);
+    --color-t: var(--color-White);
+}
 
 /* thankYou */
 .thankYou {
     display: none;
-}
-
-/* fodter */
-.attribution {
-    font-size: 11px;
     text-align: center;
-    justify-self: flex-end;
-}
-
-.attribution a {
-    color: hsl(228, 45%, 44%);
 }

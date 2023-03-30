@@ -22,7 +22,7 @@ The designs were created to the following widths:
 - Very Dark Blue: hsl(216, 12%, 8%)
 
 ## Typography
-
+    
 ### Body Copy
 
 - Font size (paragraph): 15px
