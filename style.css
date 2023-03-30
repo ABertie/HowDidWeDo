@@ -3,7 +3,6 @@
     --Desktop: 1440px;
 
     --color-primary: hsl(25, 97%, 53%);
-    --color-DarkPrimary: hsl(25, 64%, 44%);
 
     --color-White: hsl(0, 0%, 100%);
     --color-LightGrey: hsl(217, 12%, 63%);
@@ -45,7 +44,8 @@ h4 {
     border-radius: 2rem;
     padding: .5rem;
     margin: auto;
-    color: var(--color-DarkPrimary);
+    color: var(--color-primary);
+    opacity: .7;
 }
 
 main {
